@@ -11,6 +11,8 @@ public class CerclesView extends View {
     Context context;
     int ampleView, altView;
 
+    private final int SPEED = 10;
+
     // Posició del cercle
     int posx, posy;
 
@@ -43,11 +45,10 @@ public class CerclesView extends View {
 
 
     public void mou() {
-        posx++;
-        posy++;
+        posx = posx + SPEED;
+        posy = posy + SPEED;
         if (posx > this.ampleView) posx = 0;
         if (posy > this.altView) posy = 0;
-
     }
 
     @Override
